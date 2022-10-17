@@ -24,12 +24,12 @@ public class CustomerServiceIMPL implements ICustomerService {
     }
 
     @Override
-    public Customer findById(long id) {
+    public Customer findById(Long id) {
         return customerRepository.findById(id);
     }
 
     @Override
-    public void delete(long id) {
+    public void delete(Long id) {
         customerRepository.delete(id);
     }
 }

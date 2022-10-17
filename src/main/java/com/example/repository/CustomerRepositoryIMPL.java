@@ -23,7 +23,8 @@ public class CustomerRepositoryIMPL implements ICustomerRepository {
     @Override
     public void save(Customer customer) {
         if (customer.getId() != null) {
-         customer.setName(customer.getName());
+            Customer customer1 = findById(customer.getId());
+            customer1.setName(customer.getName());
         }else {
             customerList.add(customer);
         }
